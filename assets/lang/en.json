@@ -1,0 +1,12 @@
+{
+    "titleRed" : "Red Page",
+        "titleGreen": "Green Page",
+        "titleBlue": "Blue Page",
+        "titleYellow":"Yellow Page",
+    
+    "descriptionRed" : "This is Red Page",
+        "descriptionGreen": "This is Green Page",
+        "descriptionBlue": "This is Blue Page",
+        "descriptionYellow":"This is Yellow Page"
+    
+}

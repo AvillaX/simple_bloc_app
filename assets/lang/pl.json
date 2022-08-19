@@ -1,0 +1,12 @@
+{
+    "titleRed" :"Czerwona Strona",
+    "titleGreen": "Zielona Strona",
+    "titleBlue": "Niebieska Strona",
+    "titleYellow":"Żółta Strona",
+    
+    "descriptionRed" : "To jest Czerwona Strona",
+    "descriptionGreen": "To jest Zielona Strona",
+    "descriptionBlue": "To jest Niebieska Strona",
+    "descriptionYellow":"To jest Żółta Strona"
+    
+}

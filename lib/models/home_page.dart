@@ -2,30 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:simple_bloc_app/cubit/app_cubit.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider<AppCubits>(
-      create: (_) => AppCubits(),
-      child: HomePageView(),
-    );
-  }
-}
+import '../language/cubit/language_cubit.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    context.read<LanguageCubit>().changeStartLang();
     var cubit = BlocProvider.of<AppCubits>(context);
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: GestureDetector(
-              onTap: () => cubit.setPage(AppPage.red),
+              onTap: () => cubit.setRedPage(),
               child: Container(
                 color: Colors.red,
               ),
@@ -33,7 +24,7 @@ class HomePageView extends StatelessWidget {
           ),
           Expanded(
             child: GestureDetector(
-              onTap: () => cubit.setPage(AppPage.green),
+              onTap: () => cubit.setGreenPage(),
               child: Container(
                 color: Colors.green,
               ),
@@ -41,7 +32,7 @@ class HomePageView extends StatelessWidget {
           ),
           Expanded(
             child: GestureDetector(
-              onTap: () => cubit.setPage(AppPage.blue),
+              onTap: () => cubit.setBluePage(),
               child: Container(
                 color: Colors.blue,
               ),
@@ -49,7 +40,7 @@ class HomePageView extends StatelessWidget {
           ),
           Expanded(
             child: GestureDetector(
-              onTap: () => cubit.setPage(AppPage.yellow),
+              onTap: () => cubit.setYellowPage(),
               child: Container(
                 color: Colors.yellow,
               ),
